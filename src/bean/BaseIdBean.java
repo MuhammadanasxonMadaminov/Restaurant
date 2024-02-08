@@ -1,10 +1,7 @@
 package bean;
 
-public class BaseIdBean {
+public abstract class BaseIdBean {
     private Integer id;
-
-    public BaseIdBean() {
-    }
 
     public Integer getId() {
         return id;

@@ -1,30 +1,33 @@
 package bean;
 
-public class UserBean extends BaseIdBean{
+import enums.UserRole;
+
+public class UserBean extends BaseIdBean {
+    private String name;
     private String login;
     private String password;
-    private Role role;
+    private UserRole role = UserRole.USER;
 
-    public UserBean() {
-    }
 
     public UserBean(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    public UserBean(String login, String password, Role role) {
+    public UserBean(String name, String login, String password) {
         this.login = login;
         this.password = password;
-        this.role = role;
+        this.name = name;
     }
 
-    public Role getRole() {
-        return role;
+
+
+    public String getName() {
+        return name;
     }
 
-    public void setRole(String role) {
-        this.role = Role.valueOf(role);
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLogin() {
@@ -41,5 +44,13 @@ public class UserBean extends BaseIdBean{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

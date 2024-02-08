@@ -1,14 +1,11 @@
 package bean;
 
-public class ApiResponce {
+public class ApiResponse extends BaseIdBean {
     private Integer code;
     private String message;
     private Object data;
 
-    public ApiResponce() {
-    }
-
-    public ApiResponce(Integer code, String message, Object data) {
+    public ApiResponse(Integer code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;

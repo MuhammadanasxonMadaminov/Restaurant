@@ -1,11 +1,14 @@
 package resource;
 
-import bean.ApiResponce;
 import bean.BaseIdBean;
+import bean.ApiResponse;
 
 public interface BaseCrudResource<T extends BaseIdBean> {
-    ApiResponce create(T bean);
-    ApiResponce get(Integer id);
-    ApiResponce update(T bean);
-    ApiResponce delete(Integer id);
+    ApiResponse add(T bean);
+
+    ApiResponse get(Integer id);
+
+    ApiResponse update(T newBean);
+
+    ApiResponse delete(Integer id);
 }
